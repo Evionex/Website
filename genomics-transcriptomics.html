@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genomics and Transcriptomics - Evionex</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="evionex.html" class="text-2xl font-bold text-white flex items-center">
+        <span class="mr-2">✦</span>Evionex
+      </a>
+      <ul class="flex space-x-6">
+        <li><a href="about.html" class="hover:text-blue-400 transition duration-300">About</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="dropdown-toggle hover:text-blue-400 transition duration-300">Services</a>
+          <div class="dropdown-menu">
+            <div class="columns">
+              <!-- Column 1: Multi-Omics -->
+              <div class="dropdown-column">
+                <h3>Multi-Omics</h3>
+                <div class="dropdown-item">
+                  <a href="genomics-transcriptomics.html">Genomics and Transcriptomics</a>
+                  <p>Analyze genetic and transcriptional data for comprehensive insights.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="proteomics.html">Proteomics</a>
+                  <p>Study protein expression and interactions to uncover biological mechanisms.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="metabolomics.html">Metabolomics</a>
+                  <p>Explore metabolic profiles to understand biochemical pathways.</p>
+                </div>
+              </div>
+              <!-- Column 2: AI-Driven Analysis -->
+              <div class="dropdown-column">
+                <h3>AI-Driven Analysis</h3>
+                <div class="dropdown-item">
+                  <a href="ai-drug-discovery.html">Drug Discovery</a>
+                  <p>Identify novel drug targets using advanced machine learning models.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="target-identification.html">Target Validation</a>
+                  <p>Validate therapeutic targets with AI and multi-omics data.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="simulation-modeling.html">Predictive Modelling</a>
+                  <p>Simulate biological processes to predict outcomes and optimize strategies.</p>
+                </div>
+              </div>
+              <!-- Column 3: Support -->
+              <div class="dropdown-column">
+                <h3>Support</h3>
+                <div class="dropdown-item">
+                  <a href="consulting.html">Consulting</a>
+                  <p>Expert guidance for your bioinformatics and AI research needs.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="data-integration.html">Data Integration</a>
+                  <p>Seamlessly integrate multi-omics data for holistic analysis.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="custom-solutions.html">Custom Solutions</a>
+                  <p>Tailored bioinformatics solutions for your unique challenges.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#insights" class="hover:text-blue-400 transition duration-300">Insights</a></li>
+        <li><a href="track.html" class="hover:text-blue-400 transition duration-300">Track Your Project</a></li>
+        <li><a href="help.html" class="hover:text-blue-400 transition duration-300">Help</a></li>
+      </ul>
+      <a href="contact.html" class="bg-lime-500 text-gray-900 py-2 px-4 rounded-lg hover:bg-lime-600 transition duration-300">Request a Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center bg-gray-900 pt-24 pb-10">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(17, 24, 39, 0) 50%, rgba(17, 24, 39, 1) 100%), url('DNA-img.jpg');"></div>
+    <div class="relative container mx-auto px-4 flex justify-center">
+      <div class="max-w-3xl text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg">
+          Genomics and Transcriptomics Analysis
+        </h1>
+        <p class="text-lg text-gray-300 mb-8 drop-shadow-md">
+          Comprehensive solutions for genetic and transcriptional data analysis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Why Choose Evionex for Genomics and Transcriptomics?</h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg text-gray-400 mb-4">
+          Genomics and transcriptomics are complex fields requiring precise data handling, advanced computational tools, and deep biological expertise. At Evionex, we simplify this complexity by providing end-to-end analysis, from raw data processing to actionable insights. Our team ensures high-quality results, addressing challenges like data noise, batch effects, and biological variability.
+        </p>
+        <p class="text-lg text-gray-400">
+          We go beyond typical analysis by integrating multi-omics data, applying AI-driven models to uncover hidden patterns, and providing custom visualizations and reports tailored to your research needs. Our expertise ensures you get more than just standard results—you get insights that drive innovation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Techniques Section -->
+  <section class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Popular Techniques We Cover</h2>
+      <div class="space-y-8 max-w-3xl mx-auto">
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">RNA-seq</h3>
+          <p class="text-gray-400 mb-2">RNA sequencing to analyze gene expression and differential expression.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> Many analyses fail to account for batch effects, leading to skewed differential expression results.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We apply advanced normalization techniques and use machine learning to identify and correct batch effects, followed by pathway enrichment analysis to reveal biological significance.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">Spatial Transcriptomics</h3>
+          <p class="text-gray-400 mb-2">Mapping gene expression in spatial contexts to understand tissue organization.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> Spatial data often suffers from low resolution, missing subtle expression patterns.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We use deconvolution algorithms to enhance resolution and integrate with single-cell RNA-seq data to provide a more detailed spatial map.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">Whole Genome Sequencing (WGS)</h3>
+          <p class="text-gray-400 mb-2">Comprehensive sequencing of the entire genome to identify variants.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> Standard pipelines often miss structural variants or rare mutations due to alignment issues.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We use long-read sequencing data integration and custom variant calling pipelines to detect structural variants and rare mutations with higher accuracy.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">Whole Exome Sequencing (WES)</h3>
+          <p class="text-gray-400 mb-2">Targeted sequencing of exonic regions to identify coding variants.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> Coverage biases can lead to missed variants in low-coverage regions.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We implement coverage correction algorithms and cross-validate with WGS data to ensure comprehensive variant detection.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">ATAC-seq</h3>
+          <p class="text-gray-400 mb-2">Assay for Transposase-Accessible Chromatin sequencing to study chromatin accessibility.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> Misinterpretation of open chromatin regions due to sequencing depth inconsistencies.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We perform deep integrative analysis with transcriptomics data to correlate chromatin accessibility with gene expression changes.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">ChIP-seq</h3>
+          <p class="text-gray-400 mb-2">Chromatin Immunoprecipitation sequencing to study protein-DNA interactions.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> High background noise can obscure true binding sites.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We use advanced peak-calling algorithms and integrate with ATAC-seq data to validate binding sites and assess functional impact.</p>
+        </div>
+        <p class="text-lg text-gray-400 text-center mt-8">
+          And much more! We offer a wide range of techniques tailored to your specific research needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">Get Started Today</h2>
+      <div class="flex flex-col items-center space-y-4">
+        <p class="text-lg text-gray-400">
+          Contact us to learn more about our genomics and transcriptomics services.
+        </p>
+        <a href="contact.html" class="bg-lime-500 text-gray-900 py-3 px-6 rounded-lg hover:bg-lime-600 transition duration-300">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evionex - Bioinformatics & AI-Driven Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="evionex.html" class="text-2xl font-bold text-white flex items-center">
+        <span class="mr-2">✦</span>Evionex
+      </a>
+      <ul class="flex space-x-6">
+        <li><a href="about.html" class="hover:text-blue-400 transition duration-300">About</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="dropdown-toggle hover:text-blue-400 transition duration-300">Services</a>
+          <div class="dropdown-menu">
+            <div class="columns">
+              <!-- Column 1: Multi-Omics -->
+              <div class="dropdown-column">
+                <h3>Multi-Omics</h3>
+                <div class="dropdown-item">
+                  <a href="genomics-transcriptomics.html">Genomics and Transcriptomics</a>
+                  <p>Analyze genetic and transcriptional data for comprehensive insights.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="proteomics.html">Proteomics</a>
+                  <p>Study protein expression and interactions to uncover biological mechanisms.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="metabolomics.html">Metabolomics</a>
+                  <p>Explore metabolic profiles to understand biochemical pathways.</p>
+                </div>
+              </div>
+              <!-- Column 2: AI-Driven Analysis -->
+              <div class="dropdown-column">
+                <h3>AI-Driven Analysis</h3>
+                <div class="dropdown-item">
+                  <a href="ai-drug-discovery.html">Drug Discovery</a>
+                  <p>Identify novel drug targets using advanced machine learning models.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="target-identification.html">Target Validation</a>
+                  <p>Validate therapeutic targets with AI and multi-omics data.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="simulation-modeling.html">Predictive Modelling</a>
+                  <p>Simulate biological processes to predict outcomes and optimize strategies.</p>
+                </div>
+              </div>
+              <!-- Column 3: Support -->
+              <div class="dropdown-column">
+                <h3>Support</h3>
+                <div class="dropdown-item">
+                  <a href="consulting.html">Consulting</a>
+                  <p>Expert guidance for your bioinformatics and AI research needs.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="data-integration.html">Data Integration</a>
+                  <p>Seamlessly integrate multi-omics data for holistic analysis.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="custom-solutions.html">Custom Solutions</a>
+                  <p>Tailored bioinformatics solutions for your unique challenges.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#insights" class="hover:text-blue-400 transition duration-300">Insights</a></li>
+        <li><a href="track.html" class="hover:text-blue-400 transition duration-300">Track Your Project</a></li>
+        <li><a href="help.html" class="hover:text-blue-400 transition duration-300">Help</a></li>
+      </ul>
+      <a href="contact.html" class="bg-lime-500 text-gray-900 py-2 px-4 rounded-lg hover:bg-lime-600 transition duration-300">Request a Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center bg-gray-900 pt-24 pb-10 mb-8">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(17, 24, 39, 0) 50%, rgba(17, 24, 39, 1) 100%), url('DNA-img.jpg');"></div>
+    <div class="relative container mx-auto px-4 flex justify-end">
+      <div class="max-w-lg text-right pr-8">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg">
+          Accelerate your research with advanced multi-omics analysis and AI-driven discovery.
+        </h1>
+        <p class="text-lg text-gray-300 mb-8 drop-shadow-md">
+          Expert bioinformatics solutions for companies and institutes. Streamline data, uncover insights, and drive innovation.
+        </p>
+        <div class="flex justify-end space-x-4">
+          <a href="services.html" class="bg-lime-500 text-gray-900 py-3 px-6 rounded-lg hover:bg-lime-600 transition duration-300">Get started</a>
+          <a href="contact.html" class="bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition duration-300 border border-gray-600">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Multi-Omics Section -->
+  <section class="min-h-[60vh] flex items-center bg-gray-800">
+    <div class="flex w-full">
+      <div class="w-full md:w-1/2 bg-hero-multiomics">
+        <img src="people.jpg" alt="Multi-Omics and AI-Driven Analysis Visualization" class="hero-image">
+      </div>
+      <div class="w-full md:w-1/2 flex items-center justify-center bg-gray-800 py-20 px-8">
+        <div class="max-w-lg">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+            Comprehensive multi-omics and AI-driven analysis
+          </h2>
+          <p class="text-lg text-gray-400 mb-4">
+            Enhance your research with integrated bioinformatics solutions. We provide expert data analysis, scalable workflows, and advanced target identification for innovative teams.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Services Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Key Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Multi-Omics</h3>
+          <p class="text-gray-400 mb-4">Integrate genomics, proteomics, and metabolomics for a holistic understanding of biological systems.</p>
+          <a href="genomics-transcriptomics.html" class="text-blue-400 hover:underline">Learn More</a>
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">AI-Driven Analysis</h3>
+          <p class="text-gray-400 mb-4">Leverage AI for drug discovery, target validation, and predictive modeling to accelerate research.</p>
+          <a href="ai-drug-discovery.html" class="text-blue-400 hover:underline">Learn More</a>
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Support</h3>
+          <p class="text-gray-400 mb-4">Expert consulting, data integration, and custom solutions tailored to your research needs.</p>
+          <a href="consulting.html" class="text-blue-400 hover:underline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-4">Your questions, answered</h2>
+      <p class="text-lg text-gray-400 text-center mb-12">
+        Explore essential information about our bioinformatics and multi-omics analysis services. For further details, contact our team.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">What data types are supported?</h3>
+          <p class="text-gray-400">We analyze genomics, transcriptomics, proteomics, metabolomics, and multi-omics datasets. Custom data types are available on request.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">How is data security managed?</h3>
+          <p class="text-gray-400">We maintain strict confidentiality and use encrypted storage, following industry-standard data protection protocols.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">Do you support AI-driven drug discovery?</h3>
+          <p class="text-gray-400">We deliver AI-based solutions for drug discovery, target identification, and biomarker analysis, tailored to your project.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">What is the project timeline?</h3>
+          <p class="text-gray-400">Timelines depend on project scope. Most analyses are completed within 2–6 weeks. Clear schedules are provided at project start.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">Can you help with grants or publications?</h3>
+          <p class="text-gray-400">We supply reports, figures, and methods for grant and publication support, including data interpretation assistance.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">How do I begin a project?</h3>
+          <p class="text-gray-400">Submit your project details. We’ll arrange a consultation, outline a workflow, and provide a quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Why Choose Evionex?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Innovative Technology</h3>
+          <p>Harness the power of AI and multi-omics to push the boundaries of bioinformatics research.</p>
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Expert Team</h3>
+          <p>Our team of bioinformaticians and data scientists brings decades of experience to every project.</p>
+        </div>
+        <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Tailored Solutions</h3>
+          <p>We customize our services to meet the unique needs of your research or organization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">Contact Us</h2>
+      <div class="flex flex-col items-center space-y-4">
+        <p class="text-lg text-gray-400">
+          Email: <a href="mailto:info@evionex.com" class="text-lime-500 hover:underline">info@evionex.com</a>
+        </p>
+        <p class="text-lg text-gray-400">
+          LinkedIn: <a href="https://www.linkedin.com/company/evionex" target="_blank" rel="noopener noreferrer" class="text-lime-500 hover:underline">Evionex</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

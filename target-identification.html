@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Target Validation - Evionex</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="evionex.html" class="text-2xl font-bold text-white flex items-center">
+        <span class="mr-2">✦</span>Evionex
+      </a>
+      <ul class="flex space-x-6">
+        <li><a href="about.html" class="hover:text-blue-400 transition duration-300">About</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="dropdown-toggle hover:text-blue-400 transition duration-300">Services</a>
+          <div class="dropdown-menu">
+            <div class="columns">
+              <!-- Column 1: Multi-Omics -->
+              <div class="dropdown-column">
+                <h3>Multi-Omics</h3>
+                <div class="dropdown-item">
+                  <a href="genomics-transcriptomics.html">Genomics and Transcriptomics</a>
+                  <p>Analyze genetic and transcriptional data for comprehensive insights.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="proteomics.html">Proteomics</a>
+                  <p>Study protein expression and interactions to uncover biological mechanisms.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="metabolomics.html">Metabolomics</a>
+                  <p>Explore metabolic profiles to understand biochemical pathways.</p>
+                </div>
+              </div>
+              <!-- Column 2: AI-Driven Analysis -->
+              <div class="dropdown-column">
+                <h3>AI-Driven Analysis</h3>
+                <div class="dropdown-item">
+                  <a href="ai-drug-discovery.html">Drug Discovery</a>
+                  <p>Identify novel drug targets using advanced machine learning models.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="target-identification.html">Target Validation</a>
+                  <p>Validate therapeutic targets with AI and multi-omics data.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="simulation-modeling.html">Predictive Modelling</a>
+                  <p>Simulate biological processes to predict outcomes and optimize strategies.</p>
+                </div>
+              </div>
+              <!-- Column 3: Support -->
+              <div class="dropdown-column">
+                <h3>Support</h3>
+                <div class="dropdown-item">
+                  <a href="consulting.html">Consulting</a>
+                  <p>Expert guidance for your bioinformatics and AI research needs.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="data-integration.html">Data Integration</a>
+                  <p>Seamlessly integrate multi-omics data for holistic analysis.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="custom-solutions.html">Custom Solutions</a>
+                  <p>Tailored bioinformatics solutions for your unique challenges.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#insights" class="hover:text-blue-400 transition duration-300">Insights</a></li>
+        <li><a href="track.html" class="hover:text-blue-400 transition duration-300">Track Your Project</a></li>
+        <li><a href="help.html" class="hover:text-blue-400 transition duration-300">Help</a></li>
+      </ul>
+      <a href="contact.html" class="bg-lime-500 text-gray-900 py-2 px-4 rounded-lg hover:bg-lime-600 transition duration-300">Request a Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center bg-gray-900 pt-24 pb-10">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(17, 24, 39, 0) 50%, rgba(17, 24, 39, 1) 100%), url('DNA-img.jpg');"></div>
+    <div class="relative container mx-auto px-4 flex justify-center">
+      <div class="max-w-3xl text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg">
+          Target Validation
+        </h1>
+        <p class="text-lg text-gray-300 mb-8 drop-shadow-md">
+          Validate therapeutic targets using AI and multi-omics data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Why Choose Evionex for Target Validation?</h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg text-gray-400 mb-4">
+          Target validation is critical to ensure the success of drug development, but traditional methods often fail to account for complex biological interactions. Evionex combines AI and multi-omics data to provide robust validation, reducing the risk of pursuing invalid targets.
+        </p>
+        <p class="text-lg text-gray-400">
+          We go beyond standard validation by integrating genomics, transcriptomics, and proteomics data, using AI to predict target-disease associations, and performing functional assays to confirm biological relevance. Our approach ensures confidence in your target selection.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Techniques Section -->
+  <section class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Popular Techniques We Cover</h2>
+      <div class="space-y-8 max-w-3xl mx-auto">
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">CRISPR Screening</h3>
+          <p class="text-gray-400 mb-2">Genome-wide knockout screens to validate target functionality.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> Off-target effects can lead to false positives.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We integrate CRISPR data with transcriptomics to identify and correct off-target effects, ensuring accurate target validation.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">RNA Interference (RNAi)</h3>
+          <p class="text-gray-400 mb-2">Gene silencing to assess target impact on disease phenotypes.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> Incomplete knockdown can obscure true target effects.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We use multi-omics integration to confirm knockdown efficiency and assess downstream pathway effects.</p>
+        </div>
+        <div class="pl-6 border-l-4 border-lime-500">
+          <h3 class="text-xl font-semibold mb-2">AI-Driven Target Scoring</h3>
+          <p class="text-gray-400 mb-2">Ranking targets based on multi-omics data and disease relevance.</p>
+          <p class="text-gray-400 mb-2"><strong>Common Pitfall:</strong> Overfitting models to limited datasets can lead to biased scoring.</p>
+          <p class="text-gray-400"><strong>Our Non-Typical Analysis:</strong> We use ensemble models and cross-validate with external datasets to ensure robust target prioritization.</p>
+        </div>
+        <p class="text-lg text-gray-400 text-center mt-8">
+          And much more! We offer a wide range of target validation techniques tailored to your research needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">Get Started Today</h2>
+      <div class="flex flex-col items-center space-y-4">
+        <p class="text-lg text-gray-400">
+          Contact us to learn more about our target validation services.
+        </p>
+        <a href="contact.html" class="bg-lime-500 text-gray-900 py-3 px-6 rounded-lg hover:bg-lime-600 transition duration-300">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Evionex</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1f2937;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 50;
+      min-width: 600px;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .columns {
+      display: flex;
+      justify-content: space-between;
+    }
+    .dropdown-column {
+      flex: 1;
+      margin-right: 1rem;
+    }
+    .dropdown-column:last-child {
+      margin-right: 0;
+    }
+    .dropdown-column h3 {
+      color: #a3e635;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .dropdown-item a {
+      color: #a3e635;
+      font-weight: 500;
+    }
+    .dropdown-item p {
+      color: #9ca3af;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="evionex.html" class="text-2xl font-bold text-white flex items-center">
+        <span class="mr-2">✦</span>Evionex
+      </a>
+      <ul class="flex space-x-6">
+        <li><a href="about.html" class="hover:text-blue-400 transition duration-300">About</a></li>
+        <li class="dropdown">
+          <a href="services.html" class="dropdown-toggle hover:text-blue-400 transition duration-300">Services</a>
+          <div class="dropdown-menu">
+            <div class="columns">
+              <!-- Column 1: Multi-Omics -->
+              <div class="dropdown-column">
+                <h3>Multi-Omics</h3>
+                <div class="dropdown-item">
+                  <a href="genomics-transcriptomics.html">Genomics and Transcriptomics</a>
+                  <p>Analyze genetic and transcriptional data for comprehensive insights.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="proteomics.html">Proteomics</a>
+                  <p>Study protein expression and interactions to uncover biological mechanisms.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="metabolomics.html">Metabolomics</a>
+                  <p>Explore metabolic profiles to understand biochemical pathways.</p>
+                </div>
+              </div>
+              <!-- Column 2: AI-Driven Analysis -->
+              <div class="dropdown-column">
+                <h3>AI-Driven Analysis</h3>
+                <div class="dropdown-item">
+                  <a href="ai-drug-discovery.html">Drug Discovery</a>
+                  <p>Identify novel drug targets using advanced machine learning models.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="target-identification.html">Target Validation</a>
+                  <p>Validate therapeutic targets with AI and multi-omics data.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="simulation-modeling.html">Predictive Modelling</a>
+                  <p>Simulate biological processes to predict outcomes and optimize strategies.</p>
+                </div>
+              </div>
+              <!-- Column 3: Support -->
+              <div class="dropdown-column">
+                <h3>Support</h3>
+                <div class="dropdown-item">
+                  <a href="consulting.html">Consulting</a>
+                  <p>Expert guidance for your bioinformatics and AI research needs.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="data-integration.html">Data Integration</a>
+                  <p>Seamlessly integrate multi-omics data for holistic analysis.</p>
+                </div>
+                <div class="dropdown-item">
+                  <a href="custom-solutions.html">Custom Solutions</a>
+                  <p>Tailored bioinformatics solutions for your unique challenges.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#insights" class="hover:text-blue-400 transition duration-300">Insights</a></li>
+        <li><a href="track.html" class="hover:text-blue-400 transition duration-300">Track Your Project</a></li>
+        <li><a href="help.html" class="hover:text-blue-400 transition duration-300">Help</a></li>
+      </ul>
+      <a href="contact.html" class="bg-lime-500 text-gray-900 py-2 px-4 rounded-lg hover:bg-lime-600 transition duration-300">Request a Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center">
+    <div class="flex w-full">
+      <!-- Left Half: Background Image -->
+      <div class="w-full md:w-1/2 bg-hero-data bg-cover bg-center"></div>
+      <!-- Right Half: Text -->
+      <div class="w-full md:w-1/2 flex items-center justify-center bg-gray-900 py-20 px-8">
+        <div class="max-w-lg">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            Get in Touch with Evionex
+          </h1>
+          <p class="text-lg text-gray-400 mb-8">
+            Have questions or ready to start your project? Reach out to us today.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-3xl font-bold mb-8">Send Us a Message</h2>
+          <div id="contact-form" class="max-w-lg">
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium mb-2">Name</label>
+              <input type="text" id="name" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium mb-2">Email</label>
+              <input type="email" id="email" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-sm font-medium mb-2">Message</label>
+              <textarea id="message" rows="5" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
+            </div>
+            <button type="button" class="w-full bg-lime-500 text-gray-900 py-3 rounded-lg hover:bg-lime-600 transition duration-300">Send Message</button>
+          </div>
+        </div>
+        <!-- Contact Information -->
+        <div>
+          <h2 class="text-3xl font-bold mb-8">Contact Information</h2>
+          <p class="text-lg text-gray-400 mb-4"><strong>Email:</strong> info@evionex.com</p>
+          <p class="text-lg text-gray-400 mb-4"><strong>Phone:</strong> +1 (555) 123-4567</p>
+          <p class="text-lg text-gray-400 mb-4"><strong>Address:</strong> 123 Bioinformatics Lane, Tech City, USA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">What types of projects does Evionex handle?</h3>
+          <p class="text-gray-400">We specialize in multi-omics analysis, AI-driven drug discovery, target identification, and computational modeling for pharmaceutical companies, biotech firms, and research institutions.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">How long does a typical project take?</h3>
+          <p class="text-gray-400">Project timelines vary depending on complexity, but most projects range from 4 weeks to 6 months. We provide a detailed timeline during the consultation phase.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Can Evionex handle large-scale datasets?</h3>
+          <p class="text-gray-400">Yes, our infrastructure is designed to process and analyze large-scale multi-omics datasets efficiently, ensuring fast and accurate results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6 text-center">
+    <p>© 2025 Evionex. All rights reserved.</p>
+  </footer>
+</body>
+</html>
