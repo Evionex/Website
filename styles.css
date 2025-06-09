@@ -131,12 +131,36 @@ nav {
     line-height: 1.4;
 }
 
-/* Responsive */
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .dropdown-menu {
+        width: 36rem; /* Reduce width for medium screens */
+    }
+
+    .dropdown-menu .columns {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+        gap: 1rem;
+    }
+
+    .dropdown-column h3 {
+        font-size: 1rem;
+    }
+
+    .dropdown-item a {
+        font-size: 0.9rem;
+    }
+
+    .dropdown-item p {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        padding: 1rem;
     }
 
     .grid-cols-3, .grid-cols-2 {
@@ -147,20 +171,81 @@ nav {
         width: 100%;
     }
 
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        text-align: center;
+    }
+
     .dropdown-menu {
         position: static;
         width: 100%;
         border: none;
         box-shadow: none;
         background: #1f2937;
+        padding: 1rem;
     }
 
     .dropdown-menu .columns {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .dropdown-item a:hover {
         transform: none;
+    }
+
+    .hero-image {
+        height: 80vh; /* Reduce hero image height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Smaller base font size */
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    .dropdown-toggle {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-menu {
+        padding: 0.75rem;
+    }
+
+    .dropdown-column h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .dropdown-item {
+        margin-bottom: 0.75rem;
+    }
+
+    .dropdown-item a {
+        font-size: 0.85rem;
+    }
+
+    .dropdown-item p {
+        font-size: 0.75rem;
+    }
+
+    .hero-image {
+        height: 60vh; /* Further reduce hero image height for very small screens */
+    }
+
+    .bg-hero-dna,
+    .bg-hero-multiomics,
+    .bg-hero-bioinformatics,
+    .bg-hero-data {
+        min-height: 80vh; /* Adjust min-height for smaller screens */
     }
 }
