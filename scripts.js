@@ -124,3 +124,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show the first slide on load
   showSlide(current);
 });
+
+
+// Scroll Animation Observer
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with animate-on-scroll class
+  document.querySelectorAll('.animate-on-scroll').forEach(element => {
+    observer.observe(element);
+  });
+});
+
+// Add smooth hover effect to all interactive elements
+document.querySelectorAll('a, button').forEach(element => {
+  element.addEventListener('mouseenter', () => {
+    element.style.transition = 'all 0.3s ease';
+  });
+});
+
+// Optional: Add parallax effect to hero section
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const heroSection = document.querySelector('.hero-image');
+  if (heroSection) {
+    heroSection.style.transform = `translateY(${scrolled * 0.1}px)`;
+  }
+});
+
+// Add the animate-on-scroll class to sections you want to animate
+document.querySelectorAll('section').forEach(section => {
+  section.classList.add('animate-on-scroll');
+});
