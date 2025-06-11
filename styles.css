@@ -6,10 +6,10 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #e5e7eb;
+    font-family: 'Montserrat', sans-serif;
+    /* Keep your existing styles below */
     background-color: #111827;
+    color: #e5e7eb;
 }
 
 /* Hero Section */
