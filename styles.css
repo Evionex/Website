@@ -7,45 +7,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    /* Keep your existing styles below */
     background-color: #111827;
     color: #e5e7eb;
-}
-
-/* Hero Section */
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.bg-hero-dna,
-.bg-hero-multiomics,
-.bg-hero-bioinformatics,
-.bg-hero-data {
-    background-color: #1f2937;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-    animation: fadeIn 1s ease-out;
 }
 
 /* Navigation */
@@ -76,13 +39,12 @@ nav {
     top: 100%;
     left: 0;
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-    width: 48rem; /* Wide enough for three columns */
+    width: 48rem;
     border: 1px solid #60a5fa;
     border-radius: 0.5rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 10px rgba(96, 165, 250, 0.2);
     z-index: 50;
     padding: 1.5rem;
-    animation: slideDown 0.3s ease-out;
 }
 
 .dropdown-menu.show {
@@ -105,12 +67,10 @@ nav {
 }
 
 .dropdown-item {
-    display: block;
     margin-bottom: 1rem;
 }
 
 .dropdown-item a {
-    display: inline-block;
     color: #d1d5db;
     text-decoration: none;
     font-size: 0.95rem;
@@ -131,34 +91,11 @@ nav {
 }
 
 /* Responsive Styles */
-/* Desktop to Medium Screens (max-width: 1024px) */
 @media (max-width: 1024px) {
-    .dropdown-menu {
-        width: 36rem; /* Reduced width */
-    }
-
-    .dropdown-menu .columns {
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
-        gap: 1rem;
-    }
-
-    .dropdown-column h3 {
-        font-size: 1rem;
-    }
-
-    .dropdown-item a {
-        font-size: 0.9rem;
-    }
-
-    .dropdown-item p {
-        font-size: 0.8rem;
-    }
-
-    /* Navigation adjustments */
     #nav-menu {
         position: absolute;
         left: 0;
-        top: 72px; /* Height of navbar */
+        top: 72px;
         width: 100%;
         background: #111827;
         flex-direction: column;
@@ -167,45 +104,65 @@ nav {
         pointer-events: none;
         z-index: 60;
         padding: 1rem;
-        transition: opacity 0.3s, top 0.3s;
+        transition: all 0.3s ease;
+        transform: translateY(-10px);
     }
 
-    #nav-menu.open {
+    #nav-menu.show {
         opacity: 1;
         pointer-events: auto;
-        top: 72px;
+        transform: translateY(0);
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    #nav-menu li a {
-        width: 100%;
-        text-align: center;
-    }
-
-    #nav-menu li a:hover {
-        background-color: rgba(30, 64, 175, 0.1);
-        border-radius: 0.5rem;
+    #nav-toggle {
+        display: block;
     }
 
     .dropdown-menu {
-        position: static;
         width: 100%;
+        position: static;
         border: none;
         box-shadow: none;
         background: #1f2937;
         padding: 1rem;
         margin-top: 0.5rem;
+        max-height: 60vh; /* Limit height to 60% of viewport height */
+        overflow-y: auto; /* Enable vertical scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+
+    /* Prevent body scroll when dropdown is open */
+    body.dropdown-open {
+        overflow: hidden;
+    }
+
+    #nav-menu {
+        max-height: calc(100vh - 72px); /* Subtract header height */
+        overflow-y: auto;
     }
 
     .dropdown-menu .columns {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    #nav-menu li {
+        width: 100%;
+    }
+
+    #nav-menu li a {
+        display: block;
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: left;
+    }
+
+    #nav-menu li a:hover {
+        background-color: rgba(30, 64, 175, 0.1);
+        border-radius: 0.5rem;
     }
 
     .dropdown-item {
@@ -217,21 +174,12 @@ nav {
     .dropdown-item:hover {
         background-color: rgba(30, 64, 175, 0.1);
     }
-
-    .dropdown-item a {
-        display: block;
-        width: 100%;
-    }
 }
 
-/* Small Screens (max-width: 480px) */
+/* Small Screens */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
-    }
-
-    nav ul {
-        gap: 0.5rem;
     }
 
     .dropdown-toggle {
@@ -259,20 +207,9 @@ nav {
     .dropdown-item p {
         font-size: 0.75rem;
     }
-
-    .hero-image {
-        height: 60vh; /* Further reduce hero image height */
-    }
-
-    .bg-hero-dna,
-    .bg-hero-multiomics,
-    .bg-hero-bioinformatics,
-    .bg-hero-data {
-        min-height: 80vh;
-    }
 }
 
-/* Hamburger & Responsive Nav for Desktop (min-width: 1024px) */
+/* Desktop Navigation */
 @media (min-width: 1024px) {
     #nav-menu {
         opacity: 1 !important;
@@ -282,8 +219,6 @@ nav {
         background: transparent !important;
         flex-direction: row !important;
         align-items: center !important;
-        top: auto !important;
-        box-shadow: none !important;
-        padding: 0 !important;
+        padding: 10px !important;
     }
 }

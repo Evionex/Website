@@ -41,43 +41,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const dropdownToggle = document.querySelector('.dropdown-toggle');
-  const dropdownMenu = document.querySelector('.dropdown-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
 
-  dropdownToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      dropdownMenu.classList.toggle('show');
-  });
+    // Handle mobile menu toggle
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        document.body.classList.toggle('dropdown-open');
+    });
 
-  // Close dropdown when clicking outside
-  document.addEventListener('click', (e) => {
-      if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
-          dropdownMenu.classList.remove('show');
-      }
-  });
-});
+    // Handle services dropdown
+    dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+    });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const navToggle = document.getElementById('nav-toggle');
-  const navMenu = document.getElementById('nav-menu');
+    // Close menus when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            navMenu.classList.remove('show');
+            document.body.classList.remove('dropdown-open');
+        }
+        if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
 
-  // Hamburger menu toggle
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    // Accessibility: toggle aria-expanded
-    navToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
-  });
-
-  // Close menu when clicking outside (on mobile)
-  document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-      navMenu.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', false);
-    }
-  });
-
-  // Prevent nav from closing when clicking inside
-  navMenu.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
+    // Prevent dropdown scroll from propagating to body
+    dropdownMenu.addEventListener('wheel', (e) => {
+        e.stopPropagation();
+    });
 });
