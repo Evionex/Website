@@ -12,7 +12,7 @@ body {
     background-color: #111827;
 }
 
-/* Style for the image in the hero section */
+/* Hero Section */
 .hero-image {
     width: 100%;
     height: 100%;
@@ -23,7 +23,6 @@ body {
     z-index: 0;
 }
 
-/* Remove background-image from these classes */
 .bg-hero-dna,
 .bg-hero-multiomics,
 .bg-hero-bioinformatics,
@@ -34,7 +33,7 @@ body {
     overflow: hidden;
 }
 
-/* Animation Keyframes */
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -132,13 +131,14 @@ nav {
 }
 
 /* Responsive Styles */
+/* Desktop to Medium Screens (max-width: 1024px) */
 @media (max-width: 1024px) {
     .dropdown-menu {
-        width: 36rem; /* Reduce width for medium screens */
+        width: 36rem; /* Reduced width */
     }
 
     .dropdown-menu .columns {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
         gap: 1rem;
     }
 
@@ -153,9 +153,29 @@ nav {
     .dropdown-item p {
         font-size: 0.8rem;
     }
-}
 
-@media (max-width: 768px) {
+    /* Navigation adjustments */
+    #nav-menu {
+        position: absolute;
+        left: 0;
+        top: 72px; /* Height of navbar */
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        align-items: flex-start;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 60;
+        padding: 1rem;
+        transition: opacity 0.3s, top 0.3s;
+    }
+
+    #nav-menu.open {
+        opacity: 1;
+        pointer-events: auto;
+        top: 72px;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -163,21 +183,14 @@ nav {
         padding: 1rem;
     }
 
-    .grid-cols-3, .grid-cols-2 {
-        grid-template-columns: 1fr;
-    }
-
-    .flex > div:last-child {
-        width: 100%;
-    }
-
-    .dropdown {
-        width: 100%;
-    }
-
-    .dropdown-toggle {
+    #nav-menu li a {
         width: 100%;
         text-align: center;
+    }
+
+    #nav-menu li a:hover {
+        background-color: rgba(30, 64, 175, 0.1);
+        border-radius: 0.5rem;
     }
 
     .dropdown-menu {
@@ -187,6 +200,7 @@ nav {
         box-shadow: none;
         background: #1f2937;
         padding: 1rem;
+        margin-top: 0.5rem;
     }
 
     .dropdown-menu .columns {
@@ -194,18 +208,26 @@ nav {
         gap: 1.5rem;
     }
 
-    .dropdown-item a:hover {
-        transform: none;
+    .dropdown-item {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
     }
 
-    .hero-image {
-        height: 80vh; /* Reduce hero image height for smaller screens */
+    .dropdown-item:hover {
+        background-color: rgba(30, 64, 175, 0.1);
+    }
+
+    .dropdown-item a {
+        display: block;
+        width: 100%;
     }
 }
 
+/* Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
     body {
-        font-size: 14px; /* Smaller base font size */
+        font-size: 14px;
     }
 
     nav ul {
@@ -239,51 +261,29 @@ nav {
     }
 
     .hero-image {
-        height: 60vh; /* Further reduce hero image height for very small screens */
+        height: 60vh; /* Further reduce hero image height */
     }
 
     .bg-hero-dna,
     .bg-hero-multiomics,
     .bg-hero-bioinformatics,
     .bg-hero-data {
-        min-height: 80vh; /* Adjust min-height for smaller screens */
+        min-height: 80vh;
     }
 }
 
-/* Hamburger & Responsive Nav */
-#nav-menu {
-  transition: opacity 0.3s, top 0.3s;
-}
-@media (max-width: 1024px) {
-  #nav-menu {
-    position: absolute;
-    left: 0;
-    top: 72px; /* Height of navbar */
-    width: 100%;
-    background: #111827;
-    flex-direction: column;
-    align-items: flex-start;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 60;
-  }
-  #nav-menu.open {
-    opacity: 1;
-    pointer-events: auto;
-    top: 72px;
-  }
-}
+/* Hamburger & Responsive Nav for Desktop (min-width: 1024px) */
 @media (min-width: 1024px) {
-  #nav-menu {
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    position: static !important;
-    width: auto !important;
-    background: transparent !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    top: auto !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-  }
+    #nav-menu {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        position: static !important;
+        width: auto !important;
+        background: transparent !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        top: auto !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
 }
