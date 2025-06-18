@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="site-bg text-gray-100">
   <!-- Navigation -->
-  <nav class="bg-gray-900/80 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50 transition-all duration-300">
+  <nav class="backdrop-blur-sm shadow-lg fixed w-full top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <a href="index.html">
         <div class="px-3 py-2 rounded-lg mr-10 focus-in"> 
           <div>
-            <img src="Pure Logo.png" alt="Evionex Logo" class="h-8 w-auto inline-block mr-1">
+            <img src="Pure Logo V1.png" alt="Evionex Logo" class="h-8 w-auto inline-block mr-1">
             <img src="Pure Text.png" alt="Evionex" class="h-8 w-auto inline-block ml-1">
           </div>
         </div>
@@ -94,45 +94,44 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section relative min-h-[90vh] flex items-center bg-gray-900 pt-24 pb-10 mb-8">
+  <section class="hero-section relative min-h-[90vh] flex items-center bg-transparent pt-24 pb-10 mb-8">
     <div id="hero-slider" class="relative w-full h-full">
       <!-- Slides -->
-      <div class="slider-slide absolute inset-0 flex flex-col md:flex-row items-center justify-center transition-opacity duration-700 opacity-100 z-10 gap-6 md:gap-8 px-4 md:px-8" data-index="0">
-        <div class="w-full md:w-1/2 flex justify-center items-center">
-            <img src="dna-img.jpg" alt="DNA Background" class="w-full h-auto object-contain rounded-lg shadow-lg max-h-[250px] md:max-h-[500px] bg-gray-950">
+      <div class="slider-slide absolute inset-0 flex flex-col xl:flex-row items-center justify-center transition-opacity duration-700 opacity-100 z-10 gap-6 xl:gap-8 px-4 xl:px-8" data-index="0">
+        <div class="relative xl:w-full flex justify-center items-center">
+            <img src="dna-img.jpg" alt="DNA Background" class="flex xl:w-4/5 xl:h-1/2 object-contain rounded-lg shadow-[0_0_20px_0_rgba(76,126,194,0.3)] max-h-[250px] xl:max-h-[90vh] bg-gray-950">
         </div>
-        <div class="w-full md:w-1/2 flex items-center justify-center">
-            <div class="max-w-lg w-full text-center md:text-right bg-black/60 md:bg-transparent rounded-lg p-4 md:p-0">
-                <!-- Keep the existing content inside -->
-                <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg text-left">
-                    Accelerate your research with advanced multi-omics analysis and AI-driven discovery.
-                </h1>
-                <p class="text-lg text-gray-300 mb-8 drop-shadow-md text-left">
-                    Expert bioinformatics solutions for companies and institutes. Streamline data, uncover insights, and drive innovation.
-                </p>
-                <div class="fixed justify-between md:justify-end space-x-4">
-                    <a href="services.html" class="bg-lime-500 text-gray-900 py-2 px-6 rounded-lg hover:bg-lime-600 transition duration-300">Get started</a>
-                    <a href="contact.html" class="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-gray-700 transition duration-300 border border-gray-600">Contact us</a>
-                </div>
+        <div class="relative p-8 xl:w-full justify-center text-center xl:text-left">
+            <div>
+              <h1 class="text-3xl xl:text-5xl font-bold mb-4 leading-tight">
+                Accelerate your research with advanced multi-omics analysis and AI-driven discovery.
+              </h1>
+              <p class="text-base text-gray-300 mb-6">
+                Expert bioinformatics solutions for companies and institutes. Streamline data, uncover insights, and drive innovation.
+              </p>
+              <div class="flex xl:flex-row space-x-8 place-content-center">
+                <a href="services.html" class="relative w-1/2 xl:w-full bg-lime-500 text-gray-900 py-2 px-4 rounded-lg hover:bg-lime-600 transition duration-300 text-center">Get started</a>
+                <a href="contact.html" class="relative w-1/2 xl:w-full bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 text-center">Contact us</a>
+              </div>
             </div>
         </div>
     </div>
-      <div class="slider-slide absolute inset-0 flex flex-col md:flex-row items-center justify-center transition-opacity duration-700 opacity-0 z-0 gap-6 md:gap-8 px-4 md:px-8" data-index="1">
-        <div class="w-full md:w-1/2 flex justify-center items-center">
-            <img src="IGV.jpg" alt="Multi-Omics Visualization" class="w-full h-auto object-contain rounded-lg shadow-lg max-h-[250px] md:max-h-[500px] bg-gray-950">
+      <div class="slider-slide absolute inset-0 flex flex-col xl:flex-row items-center justify-center transition-opacity duration-700 opacity-0 z-10 gap-6 xl:gap-8 px-4 xl:px-8" data-index="1">
+        <div class="relative xl:w-full flex justify-center items-center">
+            <img src="IGV.jpg" alt="Multi-Omics Visualization" class="flex xl:w-4/5 xl:h-1/2 object-contain rounded-lg shadow-[0_0_20px_0_rgba(76,126,194,0.3)] max-h-[250px] xl:max-h-[90vh] bg-gray-950">
         </div>
-        <div class="w-full md:w-1/2 flex items-center justify-center">
-          <div class="max-w-lg w-full text-center md:text-right bg-black/60 md:bg-transparent rounded-lg p-4 md:p-0">
-              <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg text-left">
+        <div class="relative p-8 xl:w-full justify-center text-center xl:text-left">
+          <div>
+              <h1 class="text-3xl xl:text-5xl font-bold mb-4 leading-tight">
                     Comprehensive multi-omics and AI-driven analysis
               </h1>
-              <p class="text-lg text-gray-300 mb-8 drop-shadow-md text-left">
+              <p class="text-base text-gray-300 mb-6">
                     Enhance your research with integrated bioinformatics solutions. We provide expert data analysis, scalable workflows, and advanced target identification for innovative teams.
               </p>
-            <div class="fixed justify-center md:justify-end space-x-4">
-                <a href="services.html" class="bg-lime-500 text-gray-900 py-3 px-6 rounded-lg hover:bg-lime-600 transition duration-300">Learn More</a>
-                <a href="contact.html" class="bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition duration-300 border border-gray-600">Contact us</a>
-            </div>
+            <div class="flex xl:flex-row space-x-8 place-content-center">
+                <a href="services.html" class="relative w-1/2 xl:w-full bg-lime-500 text-gray-900 py-2 px-4 rounded-lg hover:bg-lime-600 transition duration-300 text-center">Learn More</a>
+                <a href="contact.html" class="relative w-1/2 xl:w-full bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 text-center">Contact us</a>
+              </div>
           </div>
         </div>
      </div>
@@ -148,19 +147,26 @@
         </svg>
       </button>
     </div>
-  </section>
 
+    <!-- Slider Indicators -->
+    <div id="slider-indicators" class="absolute bottom-0 left-1/2 space-x-4">
+      <button class="slider-indicator" aria-label="Go to slide 1"></button>
+      <button class="slider-indicator" aria-label="Go to slide 2"></button>
+      <!-- Add more buttons if you have more slides -->
+    </div>
+  </section>
+  
   <!-- Comprehensive Multi-Omics Section -->
 <section class="min-h-[60vh] flex items-center bg-gray-800">
-  <div class="flex flex-col-reverse md:flex-row w-full">
+  <div class="flex flex-col-reverse xl:flex-row w-full">
     <!-- Image: order-last on mobile, order-first on desktop -->
-    <div class="w-full md:w-1/2 flex justify-center items-center py-6 md:py-0">
-      <img src="people.jpg" alt="Multi-Omics and AI-Driven Analysis Visualization" class="w-full h-auto object-cover rounded-lg shadow-lg max-h-[300px] md:max-h-[700px]">
+    <div class="w-full xl:w-1/2 flex justify-center items-center py-6 xl:py-0">
+      <img src="people.jpg" alt="Multi-Omics and AI-Driven Analysis Visualization" class="w-full h-auto object-cover rounded-lg shadow-lg max-h-[300px] xl:max-h-[700px]">
     </div>
     <!-- Text: order-first on mobile, order-last on desktop -->
-    <div class="w-full md:w-1/2 flex items-center justify-center bg-gray-800 py-10 md:py-20 px-4 md:px-8">
+    <div class="w-full xl:w-1/2 flex items-center justify-center bg-gray-800 py-10 xl:py-20 px-4 xl:px-8">
       <div class="max-w-lg">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+        <h2 class="text-3xl xl:text-4xl font-bold mb-4 leading-tight">
           Comprehensive multi-omics and AI-driven analysis
         </h2>
         <p class="text-lg text-gray-400 mb-4">
@@ -175,7 +181,7 @@
   <section class="py-20 bg-gray-900">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">Our Key Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
         <div class="service-card card-3d glass-card p-6 rounded-lg">
           <h3 class="text-2xl font-semibold mb-4 gradient-text">Multi-Omics</h3>
           <p class="text-gray-400 mb-4">Integrate genomics, proteomics, and metabolomics for a holistic understanding of biological systems.</p>
@@ -202,7 +208,7 @@
       <p class="text-lg text-gray-400 text-center mb-12">
         Explore essential information about our bioinformatics and multi-omics analysis services. For further details, contact our team.
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
         <div class="faq-item pl-6 border-l-4 border-lime-500">
           <h3 class="text-xl font-semibold mb-2">What data types are supported?</h3>
           <p class="text-gray-400">We analyze genomics, transcriptomics, proteomics, metabolomics, and multi-omics datasets. Custom data types are available on request.</p>
@@ -235,7 +241,7 @@
   <section class="py-20 bg-gray-900">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">Why Choose Evionex?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
         <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
           <h3 class="text-2xl font-semibold mb-4">Innovative Technology</h3>
           <p>Harness the power of AI and multi-omics to push the boundaries of bioinformatics research.</p>

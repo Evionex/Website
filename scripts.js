@@ -81,48 +81,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.slider-slide');
   const prevBtn = document.getElementById('slider-prev');
   const nextBtn = document.getElementById('slider-next');
-  let current = 0;
+  const indicators = document.querySelectorAll('.slider-indicator');
+  let currentSlide = 0;
 
-  function showSlide(idx) {
+  function showSlide(index) {
     slides.forEach((slide, i) => {
-      if (i === idx) {
-        slide.classList.add('opacity-100', 'z-10');
-        slide.classList.remove('opacity-0', 'z-0');
-      } else {
-        slide.classList.remove('opacity-100', 'z-10');
-        slide.classList.add('opacity-0', 'z-0');
-      }
+      slide.style.opacity = i === index ? '1' : '0';
+      slide.style.zIndex = i === index ? '10' : '0';
     });
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+    currentSlide = index;
   }
 
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
+  function nextSlide() {
+    showSlide((currentSlide + 1) % slides.length);
+  }
+
+  function prevSlide() {
+    showSlide((currentSlide - 1 + slides.length) % slides.length);
+  }
+
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  // Add click handlers for indicators
+  indicators.forEach((dot, i) => {
+    dot.addEventListener('click', () => showSlide(i));
   });
 
-  nextBtn.addEventListener('click', () => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  });
+  // Optional: auto-advance
+  // let interval = setInterval(nextSlide, 7000);
 
-  // Optional: swipe support for mobile
-  let startX = null;
-  document.getElementById('hero-slider').addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  });
-  document.getElementById('hero-slider').addEventListener('touchend', (e) => {
-    if (startX === null) return;
-    let endX = e.changedTouches[0].clientX;
-    if (endX - startX > 50) { // swipe right
-      prevBtn.click();
-    } else if (startX - endX > 50) { // swipe left
-      nextBtn.click();
-    }
-    startX = null;
-  });
-
-  // Show the first slide on load
-  showSlide(current);
+  // Initialize
+  showSlide(0);
 });
 
 
