@@ -94,19 +94,30 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative min-h-[60vh] flex items-center bg-gray-900 pt-24 pb-10">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(17, 24, 39, 0) 50%, rgba(17, 24, 39, 1) 100%), url('DNA-img.jpg');"></div>
-    <div class="relative container mx-auto px-4 flex justify-center">
-      <div class="max-w-3xl text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg">
-          Consulting Services
-        </h1>
-        <p class="text-lg text-gray-300 mb-8 drop-shadow-md">
-          Expert guidance for your bioinformatics and AI research needs.
-        </p>
-      </div>
-    </div>
+  <section class="relative min-h-[90vh] flex items-center bg-transparent pt-24 pb-10 mb-8 px-4 scroll-snap-section">
+    <div id="hero-slider" class="relative w-full h-full glass-card rounded-2xl p-8"> 
+      <div class="slider-slide absolute inset-0 flex flex-col md:flex-row items-center justify-center transition-opacity duration-700 opacity-100 z-10 gap-6 md:gap-8 px-4 md:px-8" data-index="0">
+        <div class="w-full md:w-1/2 flex justify-center items-center">
+            <img src="ppl_discussing.jpg" alt="DNA Background" class="w-full h-auto object-contain rounded-lg shadow-lg max-h-[250px] md:max-h-[500px] bg-gray-950">
+        </div>
+        <div class="w-full md:w-1/2 flex items-center justify-center">
+            <div class="max-w-lg w-full text-center md:text-right bg-black/60 md:bg-transparent rounded-lg p-4 md:p-0">
+              <!-- Keep the existing content inside -->
+              <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg">
+                    Consulting Services
+              </h1>
+              <p class="text-lg text-gray-300 mb-8 drop-shadow-md">
+                    Expert guidance for your bioinformatics and AI research needs.
+              </p>
+              <div class="flex justify-center md:justify-end space-x-4">
+                <a href="services.html" class="animated-button bg-lime-500 text-gray-900 py-3 px-6 rounded-lg hover:bg-lime-600 transition duration-300">Get started</a>
+                <a href="contact.html" class="animated-button bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition duration-300 border border-gray-600">Contact us</a>
+              </div>
+            </div>
+        </div>
+     </div>
   </section>
+
 
   <!-- Why Choose Us Section -->
   <section class="py-20 bg-gray-900">
