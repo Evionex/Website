@@ -94,28 +94,31 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative min-h-[90vh] flex items-center bg-transparent pt-24 pb-10 mb-8 px-4 scroll-snap-section">
-    <div id="hero-slider" class="relative w-full h-full glass-card rounded-2xl p-8"> 
-      <div class="slider-slide absolute inset-0 flex flex-col md:flex-row items-center justify-center transition-opacity duration-700 opacity-100 z-10 gap-6 md:gap-8 px-4 md:px-8" data-index="0">
-        <div class="w-full md:w-1/2 flex justify-center items-center">
-            <img src="protein network.jpg" alt="DNA Background" class="w-full h-auto object-contain rounded-lg shadow-lg max-h-[250px] md:max-h-[500px] bg-gray-950">
+  <section class="relative min-h-[70vh] flex items-center justify-center bg-transparent xl:mb-8 xl:mt-8 xl:pt-24 pt-40 pb-20 mb-32 mt-24 px-4 scroll-snap-section">
+    <div class="glass-card p-5 xl:w-auto w-3/4 max-w-7xl mx-auto flex flex-col xl:flex-row items-center rounded-3xl overflow-hidden bg-gray-800">
+      <!-- Image on the left -->
+      <div class="w-full xl:w-1/2 flex justify-center items-center xl:bg-transparent p-4 xl:p-2 xl:-translate-x-10">
+        <img src="protein network.jpg" alt="DNA Background" class="w-full max-w-md h-auto rounded-2xl shadow-xl object-cover">
+      </div>
+      <div class="hidden xl:flex items-center px-2 h-full">
+        <div class="w-1 h-64 bg-white rounded-full opacity-70"></div>
+      </div>
+      <!-- Text on the right -->
+      <div class="w-full xl:w-1/2 flex items-center justify-center bg-transparent p-6 xl:p-12">
+        <div class="w-full text-center xl:text-right">
+          <h1 class="text-3xl xl:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg">
+            Metabolomics Analysis
+          </h1>
+          <p class="text-lg text-gray-300 mb-8 drop-shadow-md">
+            In-depth analysis of metabolic profiles to uncover biochemical pathways.
+          </p>
+          <div class="flex flex-col xl:flex-row gap-4 xl:justify-end items-center xl:items-end">
+            <a href="services.html" class="animated-button bg-lime-500 text-gray-900 py-3 px-6 rounded-lg hover:bg-lime-600 transition duration-300 w-full xl:w-auto">Get started</a>
+            <a href="contact.html" class="animated-button bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition duration-300 border border-gray-600 w-full xl:w-auto">Contact us</a>
+          </div>
         </div>
-        <div class="w-full md:w-1/2 flex items-center justify-center">
-            <div class="max-w-lg w-full text-center md:text-right bg-black/60 md:bg-transparent rounded-lg p-4 md:p-0">
-              <!-- Keep the existing content inside -->
-              <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg">
-                    Metabolomics Analysis
-              </h1>
-              <p class="text-lg text-gray-300 mb-8 drop-shadow-md">
-                    In-depth analysis of metabolic profiles to uncover biochemical pathways.
-              </p>
-              <div class="flex justify-center md:justify-end space-x-4">
-                <a href="services.html" class="animated-button bg-lime-500 text-gray-900 py-3 px-6 rounded-lg hover:bg-lime-600 transition duration-300">Get started</a>
-                <a href="contact.html" class="animated-button bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition duration-300 border border-gray-600">Contact us</a>
-              </div>
-            </div>
-        </div>
-     </div>
+      </div>
+    </div>
   </section>
   
   <!-- Why Choose Us Section -->

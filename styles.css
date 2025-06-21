@@ -422,8 +422,8 @@ nav {
   background: rgba(31, 41, 55, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(96, 165, 250, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(96, 165, 250, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
 }
 
 /* Modern Text Gradient */
@@ -471,6 +471,32 @@ nav {
   transform-style: preserve-3d;
   transform: perspective(800px);
   transition: transform 0.2s;
+}
+
+/* From Uiverse.io by prashantj510 */ 
+.card {
+  width: auto;
+  height: auto;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.card2 {
+  width: auto;
+  height: auto;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  transition: all .2s;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
 
 /* Neon Glow Effect */
