@@ -1,0 +1,59 @@
+# Website Summary (read this first)
+Evionex is a bioinformatics company offering advanced multi-omics analysis and AI-driven solutions for research, drug discovery, and data integration. The website provides detailed information about services, techniques, consulting, and support for researchers and organizations in life sciences.
+
+---
+
+# Page Index
+
+/index.html
+Home page. Introduces Evionex, highlights key services (multi-omics, AI-driven drug discovery, consulting), and provides navigation to all major sections. Features a hero slider, service highlights, FAQs, and contact information.
+
+/about.html
+About page. Describes the company’s mission, values, and expertise in bioinformatics and AI. Outlines the team’s commitment to innovation, collaboration, and integrity.
+
+/services.html
+Services overview. Lists all major services including multi-omics analysis, AI-driven drug discovery, target identification, simulation & modeling, and consulting. Each service is briefly described with links to detailed pages.
+
+/genomics-transcriptomics.html
+Genomics and Transcriptomics. Details solutions for genetic and transcriptional data analysis, including RNA-seq, spatial transcriptomics, WGS, WES, ATAC-seq, and ChIP-seq. Explains Evionex’s advanced, integrative approach.
+
+/proteomics.html
+Proteomics. Describes advanced solutions for studying protein expression and interactions, including mass spectrometry, label-free quantification, and TMT labeling. Highlights Evionex’s expertise in PTM profiling and data integration.
+
+/metabolomics.html
+Metabolomics. Focuses on metabolic profiling and pathway analysis using LC-MS, GC-MS, and NMR spectroscopy. Explains how Evionex integrates metabolomics with other omics data for deeper insights.
+
+/ai-drug-discovery.html
+AI-Driven Drug Discovery. Explains how Evionex uses machine learning and multi-omics data to identify novel drug targets, perform virtual screening, and predict ADMET profiles.
+
+/target-identification.html
+Target Validation. Details AI-assisted modeling and experimental techniques for validating therapeutic targets, including CRISPR screening and RNAi. Emphasizes robust, integrative validation.
+
+/simulation-modeling.html
+Predictive Modelling. Covers computational modeling and simulation of biological processes, including systems biology, machine learning-based prediction, and molecular dynamics simulations.
+
+/consulting.html
+Consulting. Outlines expert consulting services for study design, data analysis strategy, grant and publication support, and custom solutions in bioinformatics and AI.
+
+/data-integration.html
+Data Integration. Describes methods for harmonizing multi-omics data, including CCA, MOFA, and network-based integration, with a focus on AI-driven approaches.
+
+/custom-solutions.html
+Custom Solutions. Highlights bespoke pipeline development, AI model training, and specialized visualization tools tailored to unique research challenges.
+
+/contact.html
+Contact page. Provides a contact form, company contact information, and answers to frequently asked questions about services, timelines, and project types.
+
+/help.html
+Help & Support. Offers guidance on getting started, project submission, and answers to common questions. Includes support contact information.
+
+/track.html
+Track Your Project. (If present) Allows clients to track the progress of their ongoing projects with Evionex.
+
+/teams_section.html
+Our Team. Introduces key team members, their roles, and expertise in bioinformatics and AI-driven research.
+
+---
+
+# Final Summary
+Evionex’s website is a comprehensive resource for researchers and organizations seeking advanced bioinformatics and AI solutions. Each page provides detailed information about specific services, techniques, and support, with a focus on innovation, data integration, and client collaboration. For a full understanding, LLMs should read the summary above first, then index each page as described.
