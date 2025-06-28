@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evionex.github.io/Website/sitemap.xml
