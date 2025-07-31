@@ -1,0 +1,201 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EviNote - Virtual Lab Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="site-bg">
+    <header>
+        <nav class="px-6 py-4 bg-gray-900">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold gradient-text">Evionex</a>
+                <button id="nav-toggle" class="lg:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <ul id="nav-menu" class="hidden lg:flex space-x-6 items-center">
+                    <li><a href="/about.html" class="nav-link text-gray-300 hover:text-blue-400">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-gray-300">Services</a>
+                        <div class="dropdown-menu">
+                            <div class="columns">
+                                <div class="dropdown-column">
+                                    <h3>Multi-Omics</h3>
+                                    <div class="dropdown-item">
+                                        <a href="#">Genomics and Transcriptomics</a>
+                                        <p>Analyze genetic and transcriptional data for comprehensive insights.</p>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="/proteomics.html">Proteomics</a>
+                                        <p>Study protein expression and interactions to uncover biological mechanisms.</p>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="#">Metabolomics</a>
+                                        <p>Explore metabolic profiles to understand biochemical pathways.</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>AI-Driven Analysis</h3>
+                                    <div class="dropdown-item">
+                                        <a href="#">Drug Discovery</a>
+                                        <p>Identify novel drug targets using advanced machine learning models.</p>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="#">Target Validation</a>
+                                        <p>Validate therapeutic targets with AI and multi-omics data.</p>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="#">Predictive Modelling</a>
+                                        <p>Simulate biological processes to predict outcomes and optimize strategies.</p>
+                                    </div>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Support</h3>
+                                    <div class="dropdown-item">
+                                        <a href="#">Consulting</a>
+                                        <p>Expert guidance for your bioinformatics and AI research needs.</p>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="#">Data Integration</a>
+                                        <p>Seamlessly integrate multi-omics data for holistic analysis.</p>
+                                    </div>
+                                    <div class="dropdown-item">
+                                        <a href="#">Custom Solutions</a>
+                                        <p>Tailored bioinformatics solutions for your unique challenges.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/track.html" class="nav-link text-gray-300 hover:text-blue-400">Track Your Project</a></li>
+                    <li><a href="/help.html" class="nav-link text-gray-300 hover:text-blue-400">Help</a></li>
+                    <li><a href="/demo.html" class="animated-button bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Request a Demo</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-6xl font-bold gradient-text hero-text mb-6">EviNote: Your Virtual Lab Manager</h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 animate-on-scroll">Streamline your lab's workflow with AI-powered grant writing, virtual lab notebook, and resource booking.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#get-started" class="animated-button bg-blue-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-600">Get Started</a>
+                    <a href="https://www.youtube.com/watch?v=1SjxMRxl-EA" target="_blank" class="animated-button bg-transparent border border-blue-500 text-blue-500 px-6 py-3 rounded-md text-lg hover:bg-blue-500 hover:text-white">Watch Demo</a>
+                </div>
+                <div class="mt-12 hero-image">
+                    <img src="https://via.placeholder.com/800x400" alt="EviNote Dashboard" class="mx-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold gradient-text text-center mb-12 animate-on-scroll">Why Choose EviNote?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="service-card glass-card p-6 rounded-lg animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">Grant Writing AI</h3>
+                        <p class="text-gray-300">Our AI, fine-tuned for scientific grants, suggests funding programs, critiques, and polishes your proposals to stand out.</p>
+                    </div>
+                    <div class="service-card glass-card p-6 rounded-lg animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">Virtual Lab Notebook</h3>
+                        <p class="text-gray-300">Securely store and search your lab’s data, from raw experiments to notes, with AI-powered summarization for quick insights.</p>
+                    </div>
+                    <div class="service-card glass-card p-6 rounded-lg animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">Resource Booking</h3>
+                        <p class="text-gray-300">Effortlessly reserve shared instruments with smart calendar integration, eliminating conflicts and ensuring transparency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Features Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold gradient-text text-center mb-12 animate-on-scroll">More Features to Empower Your Lab</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card card-3d p-6 rounded-lg animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">Scientific Illustrator</h3>
+                        <p class="text-gray-300">Create professional-grade figures in minutes with a library of scientifically accurate icons. Drag, drop, and customize with ease.</p>
+                    </div>
+                    <div class="card card-3d p-6 rounded-lg animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">Financial Transparency</h3>
+                        <p class="text-gray-300">Log every purchase with receipts for real-time oversight, ensuring accountability and eliminating financial surprises.</p>
+                    </div>
+                    <div class="card card-3d p-6 rounded-lg animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">Team Collaboration</h3>
+                        <p class="text-gray-300">Seamless onboarding, task assignments, and team chat keep everyone in sync, maintaining continuity across generations.</p>
+                    </div>
+                    <div class="card card-3d p-6 rounded-lg animate-on-scroll">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-4">Secure Backups</h3>
+                        <p class="text-gray-300">Your work is always safe with secure, searchable backups, accessible anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="get-started" class="py-16 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold gradient-text mb-6 animate-on-scroll">Get Started with EviNote Today</h2>
+                <p class="text-xl text-gray-300 mb-8 animate-on-scroll">Transform your lab’s productivity with one reliable platform designed by researchers, for researchers.</p>
+                <a href="/contact.html" class="animated-button bg-blue-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-600">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-300">&copy; 2025 Evionex. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
