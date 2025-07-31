@@ -15,87 +15,75 @@
 </head>
 <body class="site-bg text-gray-100">
   <!-- Navigation -->
-  <nav class="backdrop-blur-sm shadow-lg fixed w-full top-0 z-50 transition-all duration-300">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html">
-        <div class="px-3 py-2 rounded-lg mr-10 focus-in"> 
-          <div>
-            <img src="Pure Logo V1.png" alt="Evionex Logo" class="h-8 w-auto inline-block mr-1">
-            <img src="Pure Text.png" alt="Evionex" class="h-8 w-auto inline-block ml-1">
-          </div>
-        </div>
-      </a>
-      <!-- Hamburger Button (hidden on desktop) -->
-      <button id="nav-toggle" class="lg:hidden text-gray-100 focus:outline-none" aria-label="Menu">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <!-- Menu (hidden on mobile) -->
-      <ul id="nav-menu" class="flex-col lg:flex-row flex space-y-6 lg:space-y-0 lg:space-x-6 items-center absolute lg:static left-0 top-20 w-full lg:w-auto bg-gray-900 lg:bg-transparent p-8 lg:p-0 shadow-lg lg:shadow-none transition-all duration-300 ease-in-out opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto">
-        <li><a href="about.html" class="block px-4 py-2 rounded-md hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">About</a></li>
-        <li class="dropdown">
-          <a href="services.html" class="block px-4 py-2 rounded-md dropdown-toggle hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Services</a>
-          <div class="dropdown-menu">
-            <div class="columns">
-              <!-- Column 1: Multi-Omics -->
-              <div class="dropdown-column">
-                <h3>Multi-Omics</h3>
-                <div class="dropdown-item">
-                  <a href="genomics-transcriptomics.html">Genomics and Transcriptomics</a>
-                  <p>Analyze genetic and transcriptional data for comprehensive insights.</p>
+<nav class="px-6 py-4 bg-gray-900">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold gradient-text">Evionex</a>
+        <button id="nav-toggle" class="lg:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+        <ul id="nav-menu" class="hidden lg:flex space-x-6 items-center">
+            <li><a href="/about.html" class="nav-link text-gray-300 hover:text-blue-400">About</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle text-gray-300">Services</a>
+                <div class="dropdown-menu">
+                    <div class="columns">
+                        <div class="dropdown-column">
+                            <h3>Multi-Omics</h3>
+                            <div class="dropdown-item">
+                                <a href="#">Genomics and Transcriptomics</a>
+                                <p>Analyze genetic and transcriptional data for comprehensive insights.</p>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="/proteomics.html">Proteomics</a>
+                                <p>Study protein expression and interactions to uncover biological mechanisms.</p>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#">Metabolomics</a>
+                                <p>Explore metabolic profiles to understand biochemical pathways.</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-column">
+                            <h3>AI-Driven Analysis</h3>
+                            <div class="dropdown-item">
+                                <a href="#">Drug Discovery</a>
+                                <p>Identify novel drug targets using advanced machine learning models.</p>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#">Target Validation</a>
+                                <p>Validate therapeutic targets with AI and multi-omics data.</p>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#">Predictive Modelling</a>
+                                <p>Simulate biological processes to predict outcomes and optimize strategies.</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-column">
+                            <h3>Support</h3>
+                            <div class="dropdown-item">
+                                <a href="#">Consulting</a>
+                                <p>Expert guidance for your bioinformatics and AI research needs.</p>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#">Data Integration</a>
+                                <p>Seamlessly integrate multi-omics data for holistic analysis.</p>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#">Custom Solutions</a>
+                                <p>Tailored bioinformatics solutions for your unique challenges.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="dropdown-item">
-                  <a href="proteomics.html">Proteomics</a>
-                  <p>Study protein expression and interactions to uncover biological mechanisms.</p>
-                </div>
-                <div class="dropdown-item">
-                  <a href="metabolomics.html">Metabolomics</a>
-                  <p>Explore metabolic profiles to understand biochemical pathways.</p>
-                </div>
-              </div>
-              <!-- Column 2: AI-Driven Analysis -->
-              <div class="dropdown-column">
-                <h3>AI-Driven Analysis</h3>
-                <div class="dropdown-item">
-                  <a href="ai-drug-discovery.html">Drug Discovery</a>
-                  <p>Identify novel drug targets using advanced machine learning models.</p>
-                </div>
-                <div class="dropdown-item">
-                  <a href="target-identification.html">Target Validation</a>
-                  <p>Validate therapeutic targets with AI and multi-omics data.</p>
-                </div>
-                <div class="dropdown-item">
-                  <a href="simulation-modeling.html">Predictive Modelling</a>
-                  <p>Simulate biological processes to predict outcomes and optimize strategies.</p>
-                </div>
-              </div>
-              <!-- Column 3: Support -->
-              <div class="dropdown-column">
-                <h3>Support</h3>
-                <div class="dropdown-item">
-                  <a href="consulting.html">Consulting</a>
-                  <p>Expert guidance for your bioinformatics and AI research needs.</p>
-                </div>
-                <div class="dropdown-item">
-                  <a href="data-integration.html">Data Integration</a>
-                  <p>Seamlessly integrate multi-omics data for holistic analysis.</p>
-                </div>
-                <div class="dropdown-item">
-                  <a href="custom-solutions.html">Custom Solutions</a>
-                  <p>Tailored bioinformatics solutions for your unique challenges.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li><a href="track.html" class="block px-4 py-2 rounded-md hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Track Your Project</a></li>
-        <li><a href="help.html" class="block px-4 py-2 rounded-md hover:bg-gray-800 hover:text-blue-400 transition-all duration-300">Help</a></li>
-      </ul>
-      <a href="contact.html" class="bg-lime-500 text-gray-900 py-2 px-4 rounded-lg hover:bg-lime-600 transition duration-300 hidden lg:inline-block">Request a Demo</a>
+            </li>
+            <li><a href="/evinote.html" class="nav-link text-gray-300 hover:text-blue-400">EviNote</a></li>
+            <li><a href="/track.html" class="nav-link text-gray-300 hover:text-blue-400">Track Your Project</a></li>
+            <li><a href="/help.html" class="nav-link text-gray-300 hover:text-blue-400">Help</a></li>
+            <li><a href="/demo.html" class="animated-button bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Request a Demo</a></li>
+        </ul>
     </div>
-  </nav>
+</nav>
   
   <!-- Hero Section -->
   <section class="hero-section relative min-h-[90vh] flex items-center bg-transparent pt-24 pb-10 mb-8">
